@@ -7,6 +7,7 @@ from sklearn.cluster import KMeans
 
 df = pd.read_excel('hasil_cluster_rfm.xlsx')
 df = df.drop(['cluster','R_Quartile','F_Quartile','M_Quartile','RFMScore','Total_score'],axis=1)
+df.set_index('CustomerID',inplace=True)
 
 # Header Interface
 st.header("Isi dataset")
@@ -24,14 +25,14 @@ def k_means(n_clust):
     st.subheader('Cluster Plot')
     fig, axes = plt.subplots(3,1, figsize=(20, 40))
 
-    sns.scatterplot(x=df['Amount'], y=df['Recency'], hue=df['Labels'], palette=sns.color_palette('hls', n_colors=n_clust), ax=axes[0])
-    axes[0].set_title('Amount vs Recency')
+    sns.scatterplot(x=df['Monetary'], y=df['Recency'], hue=df['Labels'], palette=sns.color_palette('hls', n_colors=n_clust), ax=axes[0])
+    axes[0].set_title('Monetary vs Recency')
 
-    sns.scatterplot(x=df['Amount'], y=df['Frequency'], hue=df['Labels'], palette=sns.color_palette('hls', n_colors=n_clust), ax=axes[1])
-    axes[1].set_title('Amount vs Frequency')
+    sns.scatterplot(x=df['Monetary'], y=df['Frequency'], hue=df['Labels'], palette=sns.color_palette('hls', n_colors=n_clust), ax=axes[1])
+    axes[1].set_title('Monetary vs Frequency')
 
-    sns.scatterplot(x=df['Amount'], y=df['Frequency'], hue=df['Recency'], ax=axes[2])
-    axes[2].set_title('Amount vs Frequency vs Recency')
+    sns.scatterplot(x=df['Monetary'], y=df['Frequency'], hue=df['Recency'], ax=axes[2])
+    axes[2].set_title('Monetary vs Frequency vs Recency')
 
     st.pyplot(fig)
 
