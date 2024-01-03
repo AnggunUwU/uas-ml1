@@ -1,7 +1,7 @@
 # Laporan Proyek Machine Learning
-### Nama :
-### Nim :
-### Kelas :
+### Nama : Anggun Lisnawati
+### Nim : 211351019
+### Kelas : Malam B
 
 ## Domain Proyek
 
