@@ -5,57 +5,49 @@
 
 ## Domain Proyek
 
-Pada bagian ini, kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-  
-  Format Referensi: [Judul Referensi](https://scholar.google.com/) 
+analisis segementasi pelanggan adalah salah satu teknik yang baik untuk d pakai dan dilakukan guna mengatur strategi penjualan kedepannya. dengan adanya analisis segmentasi pelanggan, penjual atau pebisnis dapat mebuat beberapa promo dan strategi bisnis lainnya untuk meningkatkan penjualan berdasarkan kebiasaan pelanggan yang sudah di kelompokan.
 
 ## Business Understanding
 
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
+berdasarkan domain proyek yang sudah dijelaskan sebelumnya, maka perlu dibuat sistem yang mampu menganalisis dan memberikan informasi terkait pengelompokan pelanggan yang selanjutnya akan membantu pebisnis dalam melakukan treatment kepada pelanggan itu sendiri. proyek ini dibuat menggunakan metode clustering dengan model RFM dan algoritma K-means.
 
 ### Problem Statements
 
 Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
-
+- Di perlukannya segmentasi pelanggan untuk menentukan strategi bisnis
+- pengelompokan kebiasaan antar pelanggan
 ### Goals
 
 Menjelaskan tujuan dari pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
-
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
+- segmentasi pelanggan digunakan untuk mengetahui kelompok pelanggan berdasarkan kebiasaan belanja nya
+- pembagian kelompok tersebut bermaksud untuk meningkatkan strategi bisnis yang memperngaruhi pendapatan
 
     ### Solution statements
-    - Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
-    - Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
+    - pembuatan sistem yang mampu melakukan pengelompokan pelanggan menggunakan metode clustering dengan model RFM dan algoritma K-Means
+    - metrik evaluasi yg d pakai adalah metode elbow
 
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. dataset wajib menggunakan [kaggle](https://www.kaggle.com/) dan **atribut yang digunakan minimal 8 atribut**. Sertakan juga sumber atau tautan untuk mengunduh dataset.<br> 
 
-Contoh: [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction).
+dataset Ini adalah kumpulan data transaksional yang berisi semua transaksi yang terjadi antara 01/12/2010 dan 09/12/2011 untuk ritel online non-toko yang berbasis di Inggris dan terdaftar. Banyak pelanggan perusahaan ini adalah pedagang grosir. dataset ini berukuran 541909 baris dan 8 kolom.
+
+dataset: [E-Commerce Data](https://www.kaggle.com/datasets/carrie1/ecommerce-data).
 
 Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
 
 ### Variabel-variabel pada Heart Failure Prediction Dataset adalah sebagai berikut:
-- Age : merupakan umur pasien dalam satuan tahun.
-- Sex : merupakan jenis kelamin pasien meliputi [M: Male, F: Female].
-- dst
+- InvoiceNo : Nomor pembelian
+- StockCode : kode dari stock barang
+- Description : nama barang
+- Quantity : jumlah barang yang dibeli
+- InvoiceDate : tanggal transaksi pembelian barang
+- UnitPrice : harga barang
+- CustomerID : ID pelanggan
+- Country : negara tempat transaksi
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+tipe data:
+
+<img width="236" alt="image" src="https://github.com/AnggunUwU/uas-ml1/assets/149172875/2374b31e-f56c-4f70-a015-5d35ee376c93">
+
 
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
